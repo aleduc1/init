@@ -1,0 +1,2 @@
+Les cles publiques des machines dont les serveurs sont valider sont dans
+/home/<user>/.ssh/authorized_keys

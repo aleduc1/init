@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# cat crontab -e for format explanation
+# crontab -e
+# 0 4 * * 1 /home/ywoak/Studies/my_git/init/scripts/./02
+
+sudo apt-get -y update > /var/log/updat_script.log
+sudo apt-get -y upgrade >> /var/log/updat_script.log

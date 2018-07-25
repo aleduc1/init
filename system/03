@@ -1,0 +1,2 @@
+Le fichier est hostname dans etc (/etc/hostname).
+(Et pour modifier definitivement -> rename aussi dans hosts -> reboot network + system)

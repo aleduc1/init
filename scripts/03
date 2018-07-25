@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# To pass arguments in shell script its with $n.
+# n=0 being the name of the command itself.
+# Then n is argument numero n : ls $1 where n=1 -> ls {first argument}
+
+ls -1S "$1"

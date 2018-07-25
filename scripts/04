@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# crontab -e
+# 0 0 * * * /home/ywoak/Studies/my_git/init/scripts/./04
+
+CHECK=/etc/crontab
+MINE=/home/vagrant/my_git/mine
+MD5=`md5sum $CHECK | cut -d " " -f1 > /home/vagrant/my_git/init/scripts/md5file`
+MD5FILE=/home/vagrant/my_git/init/scripts/md5file
+DIFF=`diff $MD5FILE $MINE > /home/vagrant/my_git/init/scripts/diff`
+
+if [ -e $MINE ]; then
+	if [ -s /home/vagrant/my_git/init/scripts/diff ]; then
+		echo "The crontab file has been modified" | mail -s "Report" root
+		echo $(cat $MD5FILE) > $MINE
+	fi
+else
+	echo $(cat $MD5FILE) > $MINE
+fi
+
+rm /home/vagrant/my_git/init/scripts/diff
+rm /home/vagrant/my_git/init/scripts/md5file

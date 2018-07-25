@@ -1,0 +1,4 @@
+Nom : Nat-1
+Ip  : 10.60.1.11
+Au cas ou l'ip sois dynamique, elle est affiche a cote de nat-1
+lors de la commande traceroute
